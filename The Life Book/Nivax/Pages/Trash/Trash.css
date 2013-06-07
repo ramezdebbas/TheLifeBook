@@ -1,0 +1,148 @@
+﻿/* This selector is used to prevent ui-dark/light.css from overwriting changes
+   to .win-surface. */
+.TrashBox .itemslist .win-horizontal.win-viewport .win-surface {
+    margin-left: 116px;
+}
+
+.TrashBox .itemslist {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
+
+.TrashBox .itemslist .win-groupheader {
+    margin: 0;
+    margin-left: 70px;
+    padding: 0;
+}
+
+.TrashBox .itemslist .win-groupheader .group-title {
+    margin-bottom: 15px;
+}
+
+.TrashBox .itemslist .win-horizontal.win-viewport .win-container {
+    margin: 10px;
+}
+
+.TrashBox .itemslist .win-item{
+    height: 110px;
+    width: 220px;
+    color:#4d4d4d;
+}
+
+.TrashBox  .itemslist .note{
+    /*background:#fff;*/
+    /*color:#4d4d4d;*/
+    height:100%;
+    background:rgb(255, 252, 196);
+}
+
+    .TrashBox  .itemslist .note .item-overlay-line{
+        display:-ms-grid;
+        -ms-grid-rows:37px 1fr 23px;
+        -ms-grid-columns:16px 1fr 10px;
+        width:100%;
+        height:100%;
+        background:url(/images/220x110lines.png);
+    }
+        .TrashBox  .itemslist  .note .item-overlay-line .item-title{
+            -ms-grid-row:1;
+            -ms-grid-column:2;
+            font-size:13pt;
+            font-weight:500;
+            font-family:'Segoe UI';
+            line-height:35px;
+            overflow:hidden;
+        }
+        .TrashBox  .itemslist  .note .item-overlay-line .item-content{
+            -ms-grid-row:2;
+            -ms-grid-column:2;
+            overflow:hidden;
+            font-size:10pt;
+            line-height:16px;
+            font-family:'Segoe UI Semilight';
+            -ms-word-break:break-all;
+            font-feature-settings: "dlig" 1, "ss02" 1, "case" 1;
+        }
+        .TrashBox  .itemslist  .note .item-overlay-line .item-date{
+            -ms-grid-row:3;
+            -ms-grid-column:2;
+            font-size:10pt;
+            color:rgb(138, 72, 55);
+        }
+
+
+#NavBar {
+    height: 100px;
+}
+    #NavBar #Homebutton {
+        width: 86px;
+        height: 100px;
+        text-align: center;
+        margin-left: 40px;
+        float: left;
+    }
+        #NavBar #Homebutton span {
+           width: 86px;
+           height: 70px;
+           float: left;
+           font-size: 30pt;
+           line-height: 80px;
+           text-align: center;
+        }
+        #NavBar #Homebutton:active,#NavBar #Homebutton:hover {
+            background: rgba(255,255,255,.2);
+        }
+    
+@media screen and (-ms-view-state: fullscreen-landscape), screen and (-ms-view-state: fullscreen-portrait), screen and (-ms-view-state: filled) {
+    .TrashBox .itemslist .win-item .item-overlay {
+        background:#fffdf6;
+        
+    }
+
+        .TrashBox .itemslist .win-item .item-overlay .item-title {
+            color:#656565;
+        }
+        .TrashBox .itemslist .win-item .item-overlay .item-content  {
+            color:rgba(0,0,0,.5);
+        }
+        
+}
+
+@media screen and (-ms-view-state: snapped) {
+
+   .TrashBox .itemslist .win-viewport :not(.win-footprint).win-container {
+        margin:10px 50px;
+        background:#fff;
+        color:#4d4d4d;
+    }
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .TrashBox .itemslist .win-horizontal.win-viewport .win-surface {
+        margin-left: 26px;
+    }
+}
+
+@media screen and (-ms-high-contrast) {
+
+    .TrashBox .itemslist .win-item .item-overlay {
+        border:1px solid #fff;
+    }
+
+
+    
+    #NavBar #recylebutton span {
+           background: url(/images/recycle-B.png) 0px 0px no-repeat ;
+        }
+    .win-listview .win-selected.win-container {
+        color:#fff;
+    }
+        .win-listview .win-container:hover {
+        color:#fff;
+        }
+    .win-listview .win-selected.win-container:hover {
+        color:#fff;
+    }
+}

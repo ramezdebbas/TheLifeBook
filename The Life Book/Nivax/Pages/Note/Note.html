@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>Note</title>
+
+    <!-- WinJS 引用 -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="Note.css" rel="stylesheet" />
+    <link href="print.css" rel="stylesheet" media="print" />
+    <script src="/js/jquery-1.8.1.min.js"></script>
+    <script src="/js/wysihtml5-parserule.js"></script>
+    <script src="/js/wysihtml5-0.4.0pre.min.js"></script>
+    <script src="/js/Util.js"></script>
+    <script src="/js/data.js"></script>
+    <script src="Note.js"></script>
+</head>
+<body>
+    <div class="notetemplate" data-win-control="WinJS.Binding.Template">
+        <div class="item-overlay">
+            <div class="item-title" data-win-bind="textContent: title"></div>
+            <div class="item-date" data-win-bind="textContent:updated"></div>
+            <div class="item-content" data-win-bind="innerHTML:content"></div>
+        </div>
+    </div>
+
+
+    <div class="Note fragment">
+        
+
+
+        <section aria-label="List" role="list">
+            <div id="NoteList" data-win-control="WinJS.UI.ListView" aria-label="list" data-win-options="{selectionMode:'none'}"></div>
+        </section>
+        <!--<header role="heading">
+            <div class="notecount">100 Notes</div>
+        </header>-->
+
+        <section aria-label="Main content" role="main">
+             <div id="NoteMainContent">
+                <div id="Note_id" class="note_id"></div>
+                <div class="notebodytop">
+                    <div id="Note_header" class="note_header" contenteditable="true"></div>
+                </div>
+                <div id="Note_des" class="note_des">
+                    <div class="note_tags" id="note_tag">Tag:</div>
+                    <div id="Note_tags" contenteditable="true"></div>
+                    <div id="Note_updated" class="note_updated"></div>
+                </div>
+                <div id="Note_Content" class="note_content" contenteditable="true" role="note"></div>
+            </div>
+        </section>
+    </div>
+
+    <div id="AppBar" data-win-control="WinJS.UI.AppBar" class="customColor" data-win-options="">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdPin',label:'Pin to Start',icon:'pin',section:'selection',tooltip:'Pin to Start'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdColor',label:'Color',icon:'\uE218',section:'selection',tooltip:'change note color'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdDelete',label:'Delete',icon:'delete',section:'selection',tooltip:'Delete note'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdAdd',label:'New Note',icon:'add',section:'global',tooltip:'Add a new note'}"></button>
+    </div>
+
+    <div id="NavBar" data-win-control="WinJS.UI.AppBar" class="customColor" data-win-options="{layout:'custom',placement:'top'}" aria-label="Navigation Bar">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" type="button" id="usedefine"></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle"></span>
+            </h1>
+        </header>
+    </div>
+
+    <div id="color_select_area" data-win-control="WinJS.UI.Flyout">
+        <button id="color1"></button>
+        <button id="color2"></button>
+        <button id="color3"></button>
+        <button id="color4"></button>
+        <button id="color5"></button>
+        <button id="color6"></button>
+        <button id="color7"></button>
+                
+    </div>  
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+﻿.searchResults header[role=banner] .titlearea {
+    -ms-grid-column: 2;
+    -ms-grid-columns: auto 20px 1fr 20px;
+    display: -ms-grid;
+}
+
+    .searchResults header[role=banner] .titlearea .pagetitle {
+        width: auto;
+    }
+
+    .searchResults header[role=banner] .titlearea .pagesubtitle {
+        -ms-grid-column: 3;
+        margin-top: 32px;
+    }
+
+.searchResults section[role=main] {
+    /* 定义包含筛选器和结果的行的网格*/
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 180px 1fr;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    display: -ms-grid;
+}
+
+    .searchResults section[role=main] .resultsmessage {
+        margin-left: 120px;
+        margin-top: 193px;
+    }
+
+    .searchResults section[role=main] .filterarea {
+        -ms-font-feature-settings: "case" 1;
+        -ms-grid-row: 1;
+    }
+
+        .searchResults section[role=main] .filterarea .filterbar {
+            height: auto;
+            list-style-type: none;
+            margin-left: 80px;
+            margin-top: 133px;
+            max-width: calc(100% - 120px);
+        }
+
+            .searchResults section[role=main] .filterarea .filterbar li {
+                display: inline;
+                margin-right: 40px;
+                margin-top: 5px;
+                opacity: 0.6;
+            }
+
+                .searchResults section[role=main] .filterarea .filterbar li.highlight, .searchResults section[role=main] .filterarea .filterbar li:hover {
+                    opacity: 1.00;
+                }
+
+        /* 隐藏 <select> 筛选器列表。它仅将在对齐模式下显示。*/
+        .searchResults section[role=main] .filterarea .filterselect {
+            display: none;
+        }
+
+    .searchResults section[role=main] .resultslist {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
+        height: 100%;
+        position: relative;
+        width: 100%;
+        z-index: 0;
+    }
+
+        .searchResults section[role=main] .resultslist .win-horizontal.win-viewport .win-surface {
+            margin-bottom: 60px;
+            margin-left: 90px;
+            margin-right: 90px;
+            margin-top: 198px;
+        }
+
+        .searchResults section[role=main] .resultslist .win-container {
+            margin-bottom: 10px;
+            margin-left: 23px;
+            margin-right: 23px;
+            color: rgb(61, 61, 61);
+        }
+
+        .searchResults section[role=main] .resultslist .item {
+            /* 定义包含图标、间距和项详细信息的列的网格*/
+            /*-ms-grid-columns: 40px 1fr;
+            -ms-grid-rows: 1fr;
+            display: -ms-grid;*/
+            height: 110px;
+            /*padding-left: 7px;
+            padding-right: 7px;
+            padding-top: 1px;*/
+            width: 220px;
+        }
+
+          
+
+            .searchResults section[role=main] .resultslist .item .item-content {
+                display:-ms-grid;
+                -ms-grid-rows:37px 1fr 23px;
+                -ms-grid-columns:16px 1fr 10px;
+                width:100%;
+                height:100%;
+                background:url(/images/220x110lines.png);
+            }
+
+            .searchResults section[role=main] .resultslist .item .item-content .item-title{
+                -ms-grid-row:1;
+                -ms-grid-column:2;
+                font-size:13pt;
+                font-weight:500;
+                font-family:'Segoe UI';
+                line-height:35px;
+                overflow:hidden;
+            }
+            .searchResults section[role=main] .resultslist .item .item-content .item-subtitle{
+                -ms-grid-row:2;
+                -ms-grid-column:2;
+                overflow:hidden;
+                font-size:10pt;
+                line-height:16px;
+                font-family:'Segoe UI Semilight';
+                word-wrap:break-word;
+                -ms-word-break:break-all;
+                font-feature-settings: "dlig" 1, "ss02" 1, "case" 1;
+            }
+            .searchResults section[role=main] .resultslist .item .item-content .item-description{
+                -ms-grid-row:3;
+                -ms-grid-column:2;
+                font-size:10pt;
+                color:rgb(138, 72, 55);
+            }
+
+                .searchResults section[role=main] .resultslist .item .item-content .item-subtitle, .searchResults section[role=main] .resultslist .item .item-content .item-description {
+                    opacity: 0.6;
+                }
+
+                /* 定义与查询匹配的选定筛选器和文本的样式。*/
+                .searchResults section[role=main] .resultslist .item .item-content mark {
+                    background: transparent;
+                    color: rgba(90, 183, 227, 1);
+                }
+
+@media screen and (-ms-view-state: snapped) {
+    .searchResults header[role=banner] .titlearea {
+        -ms-grid-columns: 1fr 20px;
+    }
+
+        .searchResults header[role=banner] .titlearea .pagetitle {
+            margin-top: 0;
+        }
+
+    .searchResults section[role=main] {
+        /* 筛选器和结果行 */
+        -ms-grid-columns: 1fr;
+        -ms-grid-rows: 30px 1fr;
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
+        display: -ms-grid;
+    }
+
+        .searchResults section[role=main] .resultsmessage {
+            margin-left: 20px;
+            margin-top: 36px;
+        }
+
+        /* 隐藏对齐模式下的筛选器的水平列表。*/
+        .searchResults section[role=main] .filterarea .filterbar {
+            display: none;
+        }
+
+        /* 显示对齐模式下的筛选器的 <select> 列表*/
+        .searchResults section[role=main] .filterarea .filterselect {
+            display: inline;
+            margin-left: 20px;
+            margin-top: 2px;
+            max-width: calc(100% - 38px);
+        }
+
+        .searchResults section[role=main] .resultslist {
+            height: calc(100% - 30px);
+            -ms-grid-row: 2;
+            -ms-grid-row-span: 1;
+            margin-top: 30px;
+        }
+
+            .searchResults section[role=main] .resultslist .win-vertical.win-viewport .win-surface {
+                margin-bottom: 60px;
+                margin-top: 18px;
+            }
+
+            .searchResults section[role=main] .resultslist .win-container {
+                margin-left: 13px;
+                margin-right: 22px;
+            }
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .searchResults section[role=main] .resultslist .win-horizontal.win-viewport .win-surface {
+        margin-left: 70px;
+    }
+}

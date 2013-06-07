@@ -1,0 +1,15 @@
+The Life Book:
+Description:
+A life book application for you providing you all the features to note down the data. Add Tagging and categorize you notes according to the dates, having option to add different colors, option to add multiple events of life quickly & easily. The Recycle Bin for you deleted events. Option to backup & restore the data.
+	
+Features:
+•	Notepad for note down the data.
+•	Add Tagging.
+•	Categorize your notes according to the dates.
+•	Application of different colours.
+•	Option to add multiple life events.
+•	Delete the life events.
+•	Recycle Bin for the deleted life events.
+•	Fully Different User Interface Designed keeping in focus point of view of Niche (Target) Market.
+•	Fully Unique Branding (Unique Logo Designing & Graphics Designing)
+My Planner Board:

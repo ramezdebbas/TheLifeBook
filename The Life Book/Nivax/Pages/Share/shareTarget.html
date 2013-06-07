@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="ms-design-extensionType" content="ShareTarget" />
+    <title>共享目标协定</title>
+
+    <!-- WinJS 引用 -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="shareTarget.css" rel="stylesheet" />
+    <script src="/js/Util.js"></script>
+    <script src="/js/data.js"></script>
+    <script src="shareTarget.js"></script>
+</head>
+<body>
+    <!-- 将加载和显示的内容。 -->
+    <section aria-label="Main content" role="main">
+        <!--<header>
+            <div class="shared-metadata">
+                <h2 class="shared-title win-type-ellipsis"></h2>
+                <h4 class="shared-description"></h4>
+            </div>
+        </header>-->
+
+        <div id="NoteMainContent">
+            <div id="Note_id" class="note_id"></div>
+            <div class="notebodytop">
+                <div id="Note_header" class="note_header" contenteditable="true"></div>
+            </div>
+            <div id="Note_des" class="note_des">
+                <div class="note_tags" id="note_tag">Tag:</div>
+                <div id="Note_tags" contenteditable="true"></div>
+                <div id="Note_updated" class="note_updated"><input id="submit" type="submit" value="Share" /></div>
+            </div>
+            <div id="Note_Content" class="note_content" contenteditable="true" role="note"></div>
+        </div>
+
+       
+    </section>
+</body>
+</html>

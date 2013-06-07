@@ -1,0 +1,107 @@
+﻿body {
+    background:url("/images/wood-texture.jpg");
+    color: #5a5a5a;
+    
+}
+
+#NoteMainContent {
+    width: 100%;
+    margin: 0 auto;
+    height:450px;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 54px 42px 1fr;
+    font-size: 13pt;
+    background: #fffcc4;
+    margin-top: 50px;
+}
+    #NoteMainContent .note_id {
+        display: none;
+    }
+    #NoteMainContent .notebodytop {
+        background: #41342e;
+        -ms-grid-row: 1;
+        font-size: 20pt;
+        text-align: center;
+        line-height: 54px;
+        color: #fff;
+        display: -ms-grid;
+        -ms-grid-columns:54px 1fr 54px;
+    }
+        #NoteMainContent .notebodytop .note_header {
+            -ms-grid-column: 2;
+            height: 54px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+    #NoteMainContent .note_des {
+        -ms-grid-row: 2;
+        padding: 10px 30px 0 69px;
+        color: #9d4e4e;
+        background: url(/images/one-line1.png) no-repeat ,url(/images/one-line2.png) repeat-x;
+    }
+        #NoteMainContent .note_des .note_tags {
+            float: left;   
+        }
+
+        #NoteMainContent .note_des #Note_tags {
+           width: 260px;
+           overflow: hidden;
+            height:25px;
+            margin-left: 10px;
+            float: left;
+        }
+    #NoteMainContent .note_content {
+        background:#fff28f;
+        color: #000;
+        -ms-grid-row: 3;
+        word-wrap:break-word;
+        line-height: 30px;
+        padding:7px 30px 0 69px;
+        overflow-y: scroll; 
+        background:url(/images/two-line1.png) left top repeat-y;
+        background-attachment:local;
+    }
+/*section[role=main] #shareText {
+    -ms-grid-column: 2;
+    -ms-grid-row: 3;
+    -ms-grid-column-align: stretch;
+    width: 542px;
+    height: 25px;
+}*/
+
+section[role=main] .shareControls {
+    -ms-grid-column: 1;
+    -ms-grid-column-align: stretch;
+    -ms-grid-row: 3;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr auto;
+    -ms-grid-rows: 1fr;
+    margin-top:20px;
+}
+
+section[role=main] .shareControls progress {
+    display: inline;
+    height: 20px;
+    width: 20px;
+    margin-right: 7px;
+}
+
+section[role=main] .shareControls #submit {
+    -ms-grid-column: 2;
+    margin: 0px;
+}
+
+section[role=main] .shareControls .sharing {
+    visibility: hidden;
+}
+
+@media screen and (-ms-high-contrast) {
+   #NoteMainContent {
+        border:1px solid #fff;
+    }
+    .notebodytop {
+        border-bottom:1px solid #fff;
+    }
+}

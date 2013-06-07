@@ -1,0 +1,6 @@
+﻿.Note {
+    -ms-grid-columns: 0px 1fr;
+}
+.Note section[role=list]{
+    display:none;
+}

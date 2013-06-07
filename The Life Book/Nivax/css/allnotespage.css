@@ -1,0 +1,286 @@
+﻿/* This selector is used to prevent ui-dark/light.css from overwriting changes
+   to .win-surface. */
+
+#mainlist {
+        -ms-grid-row: 1;
+        -ms-grid-row-span:2;
+        -ms-grid-column-span:2;
+        /*height: calc(100% - 133px) ;*/
+        height:100%;
+        padding: 0px 0 0 0;
+        width: 100%;
+    }
+.allnotespage #zoomedInListView.groupeditemslist .win-horizontal.win-viewport .win-surface {
+    margin-top:133px;
+    margin-left: 50px;
+    /*margin-bottom: 60px;*/
+    
+}
+.allnotespage #zoomedOutListView.groupeditemslist .win-horizontal.win-viewport .win-surface {
+    margin-left: 120px;
+    margin-top:133px;
+    /*margin-bottom: 60px;*/
+}
+
+.allnotespage .groupeditemslist {
+    height:100% ;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
+
+.allnotespage .groupeditemslist .win-groupheader {
+    margin-top: 5px;
+    margin-left: 70px;
+    padding: 0;
+}
+
+.allnotespage .groupeditemslist .win-groupheader .group-title {
+    margin-bottom: 15px;
+}
+
+    .allnotespage .groupeditemslist .win-horizontal.win-viewport {
+        /*overflow-y:hidden;*/
+        -ms-overflow-x:scroll !important;
+        -ms-overflow-y:hidden !important;
+        /*overflow-x:scroll;*/
+    }
+
+.allnotespage .groupeditemslist .win-horizontal.win-viewport .win-container {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,.3);
+}
+    
+
+.allnotespage .groupeditemslist .win-item {
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr 130px;
+    display: -ms-grid;
+    height: 130px;
+    width: 320px;
+    
+}
+
+#zoomedOutListView .win-item {
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr 220px;
+    display: -ms-grid;
+    height: 220px;
+    width: 410px;
+}
+
+.allnotespage .groupeditemslist .win-item .item-overlay {
+    -ms-grid-row: 2;
+    display: -ms-grid;
+    -ms-grid-rows:1fr;
+    -ms-grid-columns: 1fr;
+}
+
+.allnotespage .groupeditemslist .win-item .item-overlay-addnote {
+    font-size:20pt;
+    color:#fff;
+    border: 2px dashed #fff;
+    -ms-grid-row: 2;
+    line-height: 126px;
+    text-align:center;
+    background:rgba(255,255,255,.4);
+}
+
+.allnotespage .groupeditemslist .win-item .item-overlay-line {
+    -ms-grid-rows:54px 1fr 35px;
+    display: -ms-grid;
+    padding: 0px 15px 0px 20px;
+    background-image:url("/images/320x130lines.png");
+}
+
+.allnotespage .groupeditemslist .win-item .item-overlay .item-title {
+    -ms-grid-row: 1;
+    overflow: hidden;
+    font-size: 16pt;
+    font-family:'Segoe UI Semibold';
+    line-height: 54px;
+    width: 285px;
+}
+
+.allnotespage .groupeditemslist .win-item .item-overlay .item-content {
+    -ms-grid-row: 2;
+    overflow: hidden;
+    width: 285px;
+    word-wrap:break-word;
+    font-family: 'Segoe UI Semilight';
+    line-height: 19px;
+}
+
+    .allnotespage .groupeditemslist .win-item .item-overlay .item-date {
+        -ms-grid-row: 3;
+        width: 285px;
+        font-size:13pt;
+        color: #8d5c42;
+        line-height: 35px
+    }
+ /**/  
+
+
+.semanticZoomItem
+{
+    height: 220px;
+    width: 410px;
+    background:#fffeec url(/images/410x220lines.png) no-repeat;
+}   
+
+.semanticZoomItem .semanticZoomItem-Text
+{
+    margin-top: 43px;
+    white-space: nowrap;
+    text-align: center;
+    /*font-weight: bold;*/
+    color: #75461d;
+}
+
+#navbar {
+    height: 100px;
+}
+    #navbar #recylebutton {
+        width: 86px;
+        height: 100px;
+        text-align: center;
+        margin-left: 40px;
+        float: left;
+    }
+        #navbar #recylebutton span {
+           width: 86px;
+           height: 70px;
+           float: left;
+           background: url(/images/recycle-B.png) no-repeat;
+        }
+        #navbar #recylebutton:active,#navbar #recylebutton:hover {
+            background: rgba(255,255,255,.2);
+        }
+    
+@media screen and (-ms-view-state: fullscreen-landscape), screen and (-ms-view-state: fullscreen-portrait), screen and (-ms-view-state: filled), screen and (-ms-view-state: snapped) {
+    .allnotespage .groupeditemslist .win-item .item-overlay {
+        background:#fffdf6;
+        
+    }
+
+        .allnotespage .groupeditemslist .win-item .item-overlay .item-title {
+            color:#656565;
+        }
+        .allnotespage .groupeditemslist .win-item .item-overlay .item-content  {
+            color:rgba(0,0,0,.5);
+        }
+        
+}
+
+@media screen and (-ms-view-state: snapped) {
+
+    #mainlist {
+        -ms-grid-row: 2;
+        -ms-grid-row-span:1;
+        /*height: calc(100% - 133px) ;*/
+    }
+    
+    .allnotespage .groupeditemslist .win-vertical.win-viewport .win-surface {
+        margin-bottom: 30px;
+        /*margin-top:133px;*/
+    }
+    .allnotespage .groupeditemslist .win-vertical.win-viewport {
+        /*overflow-x:hidden;*/
+        /*overflow-y:scroll;*/
+        -ms-overflow-x:hidden !important;
+        -ms-overflow-y:scroll !important;
+    }
+    .allnotespage .groupeditemslist .win-vertical.win-viewport .win-container {
+        margin: 10px 28px 10px 20px;
+        box-shadow: 0px 2px 10px rgba(0,0,0,.3);
+    }
+
+        .allnotespage .groupeditemslist .win-vertical.win-viewport .win-container:hover {
+            /*outline: rgba(255, 255, 255, 0.3) solid 10px;*/
+        }
+
+    .allnotespage .groupeditemslist .win-item {
+        -ms-grid-columns: 1fr;
+        -ms-grid-rows: 1fr;
+        display: -ms-grid;
+        height: 91px;
+        width: 272px;
+    }
+
+
+        .allnotespage .groupeditemslist .win-item .item-overlay {
+           
+        }
+
+        .allnotespage .groupeditemslist .win-item .item-overlay-addnote {
+            font-size:20pt;
+            color:#fff;
+            border: 2px dashed #fff;
+            -ms-grid-row: 1;
+            line-height: 90px;
+            text-align:center;
+            background:rgba(255,255,255,.4);
+        }
+        
+        .allnotespage .groupeditemslist .win-item .item-overlay-line {
+            -ms-grid-column: 1;
+            -ms-grid-row: 1;
+            -ms-grid-rows:54px 0px 1fr;
+            padding: 0px 15px 2px 15px;
+        }
+        
+            .allnotespage .groupeditemslist .win-item .item-overlay .item-title {
+                -ms-grid-row: 1;
+                overflow: hidden;
+                margin-top: 4px;
+                max-height: 40px;
+                width: 242px;
+            }
+
+        .allnotespage .groupeditemslist .win-item .item-overlay .item-content {
+            opacity: 0.6;
+            width: 242px;
+        }   
+.semanticZoomItem
+{
+    height: 220px;
+    width: 272px;
+}   
+
+.semanticZoomItem .semanticZoomItem-Text
+{
+    line-height: 75px;
+    
+}
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .allnotespage .groupeditemslist .win-horizontal.win-viewport .win-surface {
+        margin-left: 26px;
+    }
+}
+
+@media screen and (-ms-high-contrast) {
+
+    .allnotespage .groupeditemslist .win-item .item-overlay {
+        border:1px solid #fff;
+    }
+
+    .allnotespage #zoomedOutListView.groupeditemslist .win-horizontal.win-viewport .win-surface .win-item {
+        border:1px solid #fff;
+    }
+    
+    #navbar #recylebutton span {
+           background: url(/images/recycle-B.png) no-repeat;
+        }
+    .win-listview .win-selected.win-container {
+        color:#fff;
+    }
+        .win-listview .win-container:hover {
+        color:#fff;
+        }
+    .win-listview .win-selected.win-container:hover {
+        color:#fff;
+    }
+}

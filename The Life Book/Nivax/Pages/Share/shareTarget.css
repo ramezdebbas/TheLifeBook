@@ -1,0 +1,122 @@
+﻿section[role=main]{
+    background:url(/images/one-line1.png) repeat-y #fefed8;
+    height:100%;
+}
+
+#NoteMainContent {
+    width:100%;height:100%;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 72px 56px 1fr;
+    font-size: 13pt;
+    box-shadow: 0px 2px 10px rgba(0,0,0,.3);
+    font-feature-settings: "dlig" 1, "ss02" 1, "case" 1;
+    overflow-y:scroll;
+    -ms-overflow-style:-ms-autohiding-scrollbar;
+    /*background:url(/images/two-line1.png) left top repeat-y #fefed8;*/
+    background:url(/images/36line.png) 129px 129px repeat;
+    background-attachment:local;
+}
+    #NoteMainContent .note_id {
+        display: none;
+    }
+    #NoteMainContent .notebodytop {
+        background:url(/images/one-line1.png) left top repeat-y #fefed8;
+        /*background:#fefed8;*/
+        /*background: url(/images/one-line1.png) no-repeat ,url(/images/one-line2.png) repeat-x;*/
+        -ms-grid-row: 1;
+        font-size: 22pt;
+        /*text-align: center;*/
+        line-height: 54px;
+        color: #000;
+        display:-ms-grid;
+        -ms-grid-columns:69px 1fr 30px;
+    }
+        #NoteMainContent .notebodytop .note_header {
+            -ms-grid-column:2;
+            height: 80px;
+            /*text-align: center;*/
+            overflow: hidden;
+            white-space:nowrap;
+            padding:25px 0;
+            font-weight:400;
+        }
+   
+          
+    #NoteMainContent .note_des {
+        -ms-grid-row: 2;
+        color: #9d4e4e;
+        background:url(/images/one-line1.png) left top repeat-y #fefed8;
+        /*background:url(/images/one-line1.png) left top repeat-y #fefed8,url(/images/line.png) repeat-x;*/
+        display:-ms-grid;
+        -ms-grid-columns:105px 1fr 275px;
+        -ms-grid-rows:1fr;
+        padding-top:26px;
+        height:30px;
+        line-height:30px;
+        }
+        #NoteMainContent .note_des .note_tags {
+            -ms-grid-column:1;
+            text-align:right;
+            padding-right:5px;
+           
+        }
+        #NoteMainContent .note_des .note_updated {
+            -ms-grid-column:3;
+            padding-right:30px;
+            text-align:right;
+        }
+        #NoteMainContent .note_des #Note_tags {
+            -ms-grid-column:2;
+            overflow: hidden;
+            white-space:nowrap;
+        }
+    #NoteMainContent .note_content {
+        /*background:#fff28f;*/
+        color: #000;
+        -ms-grid-row: 3;
+        word-wrap:break-word;
+        font-size:14pt;
+        line-height:36px;
+        padding:8px 30px 20px 69px;
+        /*overflow-y: scroll;*/ 
+        /*background:url(/images/two-line1.png) left top repeat-y;*/
+        background-attachment:local;
+        font-family:'Segoe UI';
+        
+    }
+
+section[role=main] .shareControls {
+    -ms-grid-column:2;
+    /*-ms-grid-column-align: stretch;*/
+    -ms-grid-row: 3;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr auto;
+    -ms-grid-rows: 1fr;
+    margin-top:20px;
+}
+
+section[role=main] .shareControls progress {
+    display: inline;
+    height: 20px;
+    width: 20px;
+    margin-right: 7px;
+}
+
+section[role=main] .shareControls #submit {
+    -ms-grid-column: 2;
+    margin: 0px;
+}
+
+section[role=main] .shareControls .sharing {
+    visibility: hidden;
+}
+
+@media screen and (-ms-high-contrast) {
+   #NoteMainContent {
+        border:1px solid #fff;
+    }
+    .notebodytop {
+        border-bottom:1px solid #fff;
+    }
+}

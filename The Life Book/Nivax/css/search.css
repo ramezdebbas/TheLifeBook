@@ -1,0 +1,232 @@
+﻿.search section[role=main] {
+    /* Define a grid with rows for the filters, spacing and results */
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: auto 16px 1fr;
+    display: -ms-grid;
+}
+
+    .search section[role=main] .filterarea {
+        -ms-grid-row: 1;
+    }
+
+        .search section[role=main] .filterarea .filterbar {
+            height: auto;
+            list-style-type: none;
+            margin-left: 80px;
+            margin-top: 0;
+            max-width: calc(100% - 120px);
+        }
+
+            .search section[role=main] .filterarea .filterbar li {
+                display: inline;
+                font-family: "Segoe UI Light";
+                font-size: 20pt;
+                line-height: 24pt;
+                margin-right: 40px;
+            }
+
+    .search section[role=main] .resultslist .win-horizontal.win-viewport .win-surface {
+        margin-left: 110px;
+        margin-bottom: 60px;
+    }
+
+    .search section[role=main] .resultslist {
+        -ms-grid-row: 3;
+        height: 100%;
+        position: relative;
+        width: 100%;
+        z-index: 0;
+    }
+
+        .search section[role=main] .resultslist .win-horizontal.win-viewport .win-container {
+            margin-bottom: 20px;
+            margin-right: 20px;
+            box-shadow: 0px 2px 10px rgba(0,0,0,.3);
+        }
+
+        .search section[role=main] .resultslist .win-item {
+            -ms-grid-columns: 1fr;
+            -ms-grid-rows: 1fr 130px;
+            display: -ms-grid;
+            height: 130px;
+            width: 320px;
+        }
+
+        .search section[role=main] .resultslist .item {
+            /* Define a grid with columns for an icon, spacing and item details */
+            -ms-grid-row: 2;
+            display: -ms-grid;
+            -ms-grid-rows:1fr;
+            -ms-grid-columns: 1fr;
+        }
+
+            .search section[role=main] .resultslist .item .item-overlay-line {
+                -ms-grid-rows:54px 1fr 35px;
+                display: -ms-grid;
+                padding: 0px 15px 0px 20px;
+                background-image:url("/images/320x130lines.png");
+            }
+
+        .search section[role=main] .resultslist .win-item .item .item-title {
+            -ms-grid-row: 1;
+            overflow: hidden;
+            font-size: 16pt;
+            font-family:'Segoe UI Semibold';
+            line-height: 54px;
+            width: 285px;
+        }
+
+        .search section[role=main] .resultslist .win-item .item .item-subtitle {
+            -ms-grid-row: 2;
+            overflow: hidden;
+            width: 285px;
+            word-wrap:break-word;
+            font-family: 'Segoe UI Semilight';
+            line-height: 19px;
+        }
+
+        .search section[role=main] .resultslist .win-item .item .item-description {
+           -ms-grid-row: 3;
+            width: 285px;
+            font-size:13pt;
+            color: #8d5c42;
+            line-height: 35px
+        }
+
+
+            .search section[role=main] .resultslist .item  .item-subtitle, .search section[role=main] .resultslist .item  .item-description {
+                opacity: 0.6;
+            }
+            
+            
+
+.search header[role=banner] .titlearea {
+    -ms-grid-column: 2;
+    margin-top: 43px;
+}
+/*.search header[role=banner] .navigatehome {
+    display: inline-block;
+    min-width: 0;
+    min-height: 0;
+    background-clip: border-box;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+    padding: 0;
+    text-align: center;
+
+    width: 41px;
+    height: 41px;
+    font-size: 14pt;
+    line-height: 37px; 
+    vertical-align: baseline;
+}*/
+    .search header[role=banner] .titlearea .pagetitle {
+        display: inline;
+        padding: 0;
+        padding-right: 30px;
+    }
+
+    .search header[role=banner] .titlearea .pagesubtitle {
+        display: inline;
+        margin: 0;
+        padding: 0;
+    }
+
+/* Define a style for both selected filters and text matching the query. */
+.search .highlight, .search mark {
+    background: transparent;
+    color: rgba(90, 183, 227, 1);
+}
+
+/* Hide the <select> filter list. It will be shown in snapped mode only. */
+.search .filterselect {
+    display: none;
+}
+
+@media screen and (-ms-view-state: fullscreen-landscape), screen and (-ms-view-state: fullscreen-portrait), screen and (-ms-view-state: filled),screen and (-ms-view-state: snapped) {
+    .search section[role=main] .resultslist .win-item .item {
+        background:#fffdf6;
+        
+    }
+
+        .search section[role=main] .resultslist .win-item .item .item-title {
+            color:#656565;
+        }
+        .search section[role=main] .resultslist .win-item .item .item-subtitle  {
+            color:rgba(0,0,0,.5);
+        }
+        
+}
+
+
+@media screen and (-ms-view-state: snapped) {
+    .search header[role=banner] .titlearea {
+        margin-top: 72px;
+    }
+
+    .search section[role=main] {
+        /* Rows for the filters, spacing, and the results */
+        -ms-grid-columns: 1fr;
+        -ms-grid-rows: 40px 28px 1fr;
+        display: -ms-grid;
+    }
+
+        /* Hide the horizontal list of filters in snapped mode. */
+        .search section[role=main] .filterarea .filterbar {
+            display: none;
+        }
+
+        /* Show a <select> list of filters in snapped mode */
+        .search section[role=main] .filterarea .filterselect {
+            display: inline;
+            margin-left: 20px;
+            max-width: calc(100% - 38px);
+        }
+
+        .search section[role=main] .resultslist .win-vertical.win-viewport .win-surface {
+            margin-left: 10px;
+            margin-bottom: 60px;
+        }
+
+        .search section[role=main] .resultslist .win-vertical.win-viewport .win-container {
+            margin-right: 31px;
+            margin-bottom: 22px;
+            margin-top: 4px;
+        }
+
+        .search section[role=main] .resultslist .win-item {
+            height: 64px;
+            width: 280px;
+        }
+
+        .search section[role=main] .resultslist .item {
+            /* Define a grid with columns for an icon, spacing and item details */
+            -ms-grid-columns: 42px 12px 1fr;
+            -ms-grid-rows: 1fr;
+            display: -ms-grid;
+            height: 100%;
+            width: 100%;
+        }
+
+    .search header[role=banner] .pagetitle {
+        /* Update the page title to be smaller in snapped mode */
+        height: 30px;
+        margin-top: 0;
+        width: 270px;
+    }
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .search section[role=main] .resultslist .win-horizontal.win-viewport .win-surface {
+        margin-left: 90px;
+    }
+}
+
+
+@media screen and (-ms-high-contrast) {
+    .search section[role=main] .resultslist .win-item {
+        border:1px solid #fff;
+    }
+}

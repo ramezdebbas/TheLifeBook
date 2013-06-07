@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>Trash</title>
+
+    <!-- WinJS 引用 -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="Trash.css" rel="stylesheet" />
+    <script src="/js/Util.js"></script>
+    <script src="/js/data.js"></script>
+    <script src="Trash.js"></script>
+</head>
+<body>
+    <div class="notetemplate" data-win-control="WinJS.Binding.Template">
+        <div class="note">
+            <div class="item-overlay-line">
+                <h4 class="item-title" data-win-bind="textContent: title"></h4>
+                <div class="item-content" data-win-bind="textContent:content TempCovert._FormatToCleanText"></div>
+                <div class="item-date" data-win-bind="textContent:updated"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="TrashBox fragment">
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" aria-label="Back" disabled></button>
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle">Recycle bin</span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div id="TrashList" class="itemslist" aria-label="All Notes" data-win-control="WinJS.UI.ListView"
+                    data-win-options="{ selectionMode: 'multi' }">
+                </div>
+        </section>
+    </div>
+
+    <div id="AppBar" data-win-control="WinJS.UI.AppBar" class="customColor">
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdRestore', label:'Restore',section:'selection', icon:'url(images/restore.png)'}"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdClear', label:'Clear all trash', icon:'clear'}"></button>
+    </div>
+
+    <div id="NavBar" data-win-control="WinJS.UI.AppBar" aria-label="Navigation Bar" class="customColor"
+        data-win-options="{layout:'custom',placement:'top'}">
+        <div id="Homebutton"><span></span>Home</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+﻿.AllNotePage #mainlist {
+    -ms-grid-row: 2;
+    /*-ms-grid-row-span: 2;*/
+    height:100%;
+    width:100%;
+}
+
+/* 此选择器用于阻止 ui-dark/light.css 覆盖对 .win-surface
+   的更改。*/
+.AllNotePage .itemslist .win-horizontal.win-viewport .win-surface {
+    margin-left: 50px;
+}
+.AllNotePage #zoomedOutListView.itemslist .win-horizontal.win-viewport .win-surface {
+    margin-left: 120px;
+    /*margin-bottom: 60px;*/
+}
+.AllNotePage header[role=banner] .titlearea {
+            
+            /*margin-top: 20px;*/
+            /*background:url('/images/page-logo.png') no-repeat;*/
+        }
+.AllNotePage header[role=banner] .titlearea .pagetitle {
+    /*color:transparent;*/
+    
+}
+ 
+.AllNotePage .itemslist .win-horizontal.win-viewport :not(.win-footprint).win-container {
+    margin:15px;
+    background:#fff;
+    color:#4d4d4d;
+}
+.AllNotePage #zoomedOutListView.itemslist .win-horizontal.win-viewport :not(.win-footprint).win-container {
+    margin:15px;
+    color: rgb(61, 61, 61);
+}
+
+.AllNotePage .itemslist .win-horizontal.win-viewport .win-container.win-selected{
+    /*color:#fff;*/
+}
+.AllNotePage .itemslist {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
+.AllNotePage .itemslist .groupheader{
+    display:inline-block;
+    padding-left:5px;
+}
+
+.AllNotePage .itemslist .groupheader .group-title{
+    display:inline;
+    font-weight:300;
+}
+.AllNotePage .itemslist .groupheader .group-count{
+    display:inline;
+    font-size:14pt;
+    font-weight:300;
+}
+.AllNotePage .itemslist .othernote{
+    height: 110px;
+    width: 220px;
+}
+.AllNotePage .itemslist .note{
+    /*background:#fff;*/
+    /*color:#4d4d4d;*/
+    height:100%;
+}
+
+    .AllNotePage .itemslist .note .item-overlay-line{
+        display:-ms-grid;
+        -ms-grid-rows:37px 1fr 23px;
+        -ms-grid-columns:16px 1fr 10px;
+        width:100%;
+        height:100%;
+        background:url(/images/220x110lines.png);
+    }
+        .AllNotePage .itemslist  .note .item-overlay-line .item-title{
+            -ms-grid-row:1;
+            -ms-grid-column:2;
+            font-size:13pt;
+            font-weight:500;
+            font-family:'Segoe UI';
+            line-height:35px;
+            overflow:hidden;
+        }
+        .AllNotePage .itemslist  .note .item-overlay-line .item-content{
+            -ms-grid-row:2;
+            -ms-grid-column:2;
+            overflow:hidden;
+            font-size:10pt;
+            line-height:16px;
+            font-family:'Segoe UI Semilight';
+            -ms-word-break:break-all;
+            font-feature-settings: "dlig" 1, "ss02" 1, "case" 1;
+        }
+        .AllNotePage .itemslist  .note .item-overlay-line .item-date{
+            -ms-grid-row:3;
+            -ms-grid-column:2;
+            font-size:10pt;
+            color:rgb(138, 72, 55);
+        }
+
+.AllNotePage .itemslist .newnote{
+    height: 110px;
+    width: 220px;
+}
+    .AllNotePage .itemslist .newnote .note{
+        background:rgb(88,85,80);
+        
+        width:216px;
+        height:106px;
+        border:2px dashed #fff;
+    }
+    .AllNotePage .itemslist .newnote .note .newnote-overlay{
+        -ms-grid-row-span:3;
+        width:100%;
+        height:100%;
+        color:#fff;
+        line-height:106px;
+        text-align:center;
+        font-size:18pt;
+    }
+
+.semanticZoomItem
+{
+    height: 90px;
+    width: 220px;
+    background:rgb(254, 254, 216);
+}   
+
+.semanticZoomItem .semanticZoomItem-Text
+{
+    white-space: nowrap;
+    text-align: center;
+    font-weight: 400;
+    color: rgb(61, 61, 61);
+    font-size:26pt;
+    line-height:44px;
+    padding-top:10px;
+}
+.semanticZoomItem .semanticZoomItem-count{
+    text-align:center;
+    font-size:14pt;
+    font-weight:400;
+}
+
+#NavBar {
+    height: 100px;
+}
+    #NavBar #recylebutton {
+        width: 86px;
+        height: 100px;
+        text-align: center;
+        margin-left: 40px;
+        float: left;
+    }
+        #NavBar #recylebutton span {
+           width: 86px;
+           height: 70px;
+           float: left;
+           background: url(/images/recycle-B.png) no-repeat;
+        }
+        #NavBar #recylebutton:active,#navbar #recylebutton:hover {
+            background: rgba(255,255,255,.2);
+        }
+    
+
+
+@media screen and (-ms-view-state: fullscreen-landscape), screen and (-ms-view-state: fullscreen-portrait), screen and (-ms-view-state: filled) {
+    .AllNotePage .itemslist .item .item-overlay {
+        background: rgba(0,0,0,0.65);
+    }
+
+        .AllNotePage .itemslist .item .item-overlay .item-title {
+            color: rgba(255,255,255,0.87);
+        }
+
+        .AllNotePage .itemslist .item .item-overlay .item-subtitle {
+            color: rgba(255,255,255,0.6);
+        }
+}
+
+@media screen and (-ms-view-state: fullscreen-landscape) and (-ms-high-contrast), screen and (-ms-view-state: fullscreen-portrait) and (-ms-high-contrast), screen and (-ms-view-state: filled) and (-ms-high-contrast) {
+    .AllNotePage .itemslist .item .item-overlay {
+        color: WindowText;
+    }
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .AllNotePage .itemslist .win-viewport :not(.win-footprint).win-container {
+        margin:10px 50px;
+        background:#fff;
+        color:#4d4d4d;
+    }
+    .AllNotePage .itemslist .newnote{
+        height: 110px;
+        /*width: 100%;*/
+    }
+    .AllNotePage .itemslist .newnote .note{
+        /*width:285px;*/
+    }
+    .AllNotePage .itemslist .othernote{
+        height: 110px;
+        /*width: 100%;*/
+        color:#4d4d4d;
+    }
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .AllNotePage .itemslist .win-horizontal.win-viewport .win-surface {
+        margin-left: 100px;
+    }
+}

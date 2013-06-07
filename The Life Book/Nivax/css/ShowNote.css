@@ -1,0 +1,177 @@
+﻿.ShowNote{
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 126px 1fr 0px;
+    display: -ms-grid;
+    height: 100%;
+    width: 100%;
+}
+    .ShowNote header[role=banner] {
+        -ms-grid-column-span: 1;
+    }
+        .ShowNote header[role=banner] .titlearea {
+            width: 500px;
+        }
+.ShowNote header[role=banner] .pagetitle {
+        -ms-grid-column: 1;
+        overflow: hidden;
+        width: calc(100% - 20px);
+}
+
+
+#NoteMainContent {
+    width: 980px;
+    margin: 0 auto;
+    height: calc(100% - 30px);
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 54px 42px 1fr;
+    font-size: 13pt;
+    box-shadow: 0px 2px 10px rgba(0,0,0,.3);
+}
+    #NoteMainContent .note_id {
+        display: none;
+    }
+    #NoteMainContent .notebodytop {
+        background: #41342e;
+        -ms-grid-row: 1;
+        font-size: 20pt;
+        text-align: center;
+        line-height: 54px;
+        color: #fff;
+        display: -ms-grid;
+        -ms-grid-columns:54px 1fr 54px;
+    }
+        #NoteMainContent .notebodytop .note_header {
+            -ms-grid-column: 2;
+            height: 54px;
+            text-align: center;
+            overflow: hidden;
+            white-space:nowrap;
+        }
+        #NoteMainContent .notebodytop .colorbutton {
+            -ms-grid-column: 3;
+            background: url(/images/coloricon.png) center center no-repeat;
+            position: relative;
+        }
+        #NoteMainContent .notebodytop .colorbutton .colorlist {
+            width: 135px;
+            height: 380px;
+            position: absolute;
+            border: 2px dashed rgba(255,255,255,.5);
+            left: 80px;
+            top: -10px;
+            background:rgba(255,255,255,.2);
+            display: none;
+        }
+            #NoteMainContent .notebodytop .colorbutton .colorlist ul {
+                list-style: none;
+                margin: 30px 33px;
+                padding: 0px;
+            }
+            #NoteMainContent .notebodytop .colorbutton .colorlist .colorpick {
+                width: 68px;
+                height: 33px;
+                box-shadow: 0 1px 2px rgba(0,0,0,.5);
+                list-style: none;
+                margin-bottom: 15px;
+                cursor: pointer;
+            }
+    #NoteMainContent .note_des {
+        -ms-grid-row: 2;
+        color: #9d4e4e;
+        background: url(/images/one-line1.png) no-repeat ,url(/images/one-line2.png) repeat-x;
+        display:-ms-grid;
+        -ms-grid-columns:100px 1fr 175px;
+        -ms-grid-rows:1fr;
+        height:42px;
+        line-height:42px;
+        }
+        #NoteMainContent .note_des .note_tags {
+            -ms-grid-column:1;
+            text-align:right;
+            padding-right:5px;
+        }
+        #NoteMainContent .note_des .note_updated {
+            -ms-grid-column:3;
+            padding-left:20px;
+        }
+        #NoteMainContent .note_des #Note_tags {
+            -ms-grid-column:2;
+            overflow: hidden;
+            white-space:nowrap;
+        }
+    #NoteMainContent .note_content {
+        background:#fff28f;
+        color: #000;
+        -ms-grid-row: 3;
+        word-wrap:break-word;
+        line-height: 30px;
+        padding:7px 30px 0 69px;
+        overflow-y: scroll; 
+        background:url(/images/two-line1.png) left top repeat-y;
+        background-attachment:local;
+    }
+#color_select_area.win-menu {
+    width: 90px;
+}
+    #color_select_area.win-menu .win-command {
+        
+        box-shadow: 0 1px 2px rgba(0,0,0,.5);
+    }
+#color1.win-command {
+    background-color: #fffcc4;
+}
+#color2.win-command {
+    background-color:#ffdcdc;
+}
+#color3.win-command {
+    background-color:#ffd6b8;
+}
+#color4.win-command {
+    background-color:#dff7c3;
+}
+#color5.win-command {
+    background-color:#c3f2f3;
+}
+#color6.win-command {
+    background-color:#afdaff;
+}
+#color7.win-command {
+    background-color:#d2cef5;
+}
+
+@media screen and (-ms-view-state: snapped) {
+
+    #NoteMainContent {
+        width: 100%;
+    }
+
+   #NoteMainContent .note_des {
+        -ms-grid-columns:75px 1fr 30px;
+
+    }
+   #NoteMainContent .note_des .note_updated {
+            display:none;
+        }
+        #NoteMainContent .notebodytop .colorbutton{
+            
+            display: none;
+        }
+        #NoteMainContent .note_des {
+             background: url(/images/one-line1.png) -24px top no-repeat ,url(/images/one-line2.png) repeat-x;
+        }
+        #NoteMainContent .note_content {
+            background:url(/images/snaplines.png) left top repeat-y;
+            padding-left: 45px;
+            background-attachment:local;
+        }
+}
+
+@media screen and (-ms-high-contrast) {
+   #NoteMainContent {
+        border:1px solid #fff;
+    }
+    .notebodytop {
+        border-bottom:1px solid #fff;
+    }
+}

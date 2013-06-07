@@ -1,0 +1,327 @@
+﻿.Note{
+    -ms-grid-columns:378px 1fr;
+    -ms-grid-rows: 126px 1fr 0px;
+    display: -ms-grid;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    margin: 0px;
+    padding: 0px;
+}
+
+.Note header[role=heading]{
+    -ms-grid-column:1;
+    -ms-grid-row:1;
+    
+}
+/*.Note header[role=heading] .notecount{
+    width:100%;
+    padding:40px 0;
+    font-size:22pt;
+    text-align:center;
+    background:rgba(68,64,59,0.8);
+    position:relative;
+    z-index:999;
+}*/
+
+.Note section[role=list]{
+    -ms-grid-row:1;
+    -ms-grid-row-span:2;
+    -ms-grid-column:1;
+}
+
+.Note section[role=list]  #NoteList{
+    width:100%;
+    height:100%;
+}
+.Note section[role=list]  #NoteList div.win-viewport.win-vertical{
+    display:-ms-grid;
+    -ms-grid-columns:1fr;
+    -ms-grid-rows:100px 1fr;
+
+}
+
+.Note section[role=list]  #NoteList #notecount{
+    /*font-size:22pt;*/
+    /*text-align:center;*/
+    position:relative;
+}
+.Note section[role=list]  #NoteList #notecount .count{
+    font-size:22pt;
+    text-align:center;
+    /*width:378px;*/
+    /*height:50px;*/
+    /*top:20px;*/
+    line-height:100px;
+    /*position:fixed;*/
+    
+    background:rgba(68,64,59,0.8);
+}
+.Note section[role=list]  #NoteList .win-vertical.win-viewport .win-surface{
+    -ms-grid-row:2;
+}
+.Note section[role=list]  #NoteList  .win-container{
+    margin-right:0px;
+    margin-left:0px;
+    background:none;
+    overflow:hidden;
+    /*border-left:5px solid yellow;*/
+}
+
+.Note section[role=list]  #NoteList .win-item{
+    height:90px;
+}
+.Note section[role=list]  #NoteList .item-overlay{
+   display:-ms-grid;
+   -ms-grid-columns:250px 1fr;
+   -ms-grid-rows:35px 41px 1fr;
+   /*border-left:5px solid yellow;*/
+   height:90px;
+   
+}
+.Note section[role=list]  #NoteList .item-overlay.select{
+    background:#504c43;
+}
+.Note section[role=list]  #NoteList .item-overlay .item-title{
+    -ms-grid-column:1;
+    -ms-grid-row:1;
+    padding:0px 30px;
+    line-height:35px;
+    font-size:15pt;
+    overflow:hidden;
+    font-family:'Segoe UI';
+    font-weight:300;
+    color:#fff;
+}
+.Note section[role=list]  #NoteList .item-overlay .item-date{
+    -ms-grid-column:2;
+    padding:0px 30px;
+    line-height:35px;
+    font-size:15pt;
+    overflow:hidden;
+    font-weight:300;
+    color:#fff;
+}
+.Note section[role=list]  #NoteList .item-overlay .item-content{
+    -ms-grid-column-span:2;
+    -ms-grid-row:2;
+    color:#959391;
+    padding:5px 30px;
+    overflow:hidden;
+    word-break:break-all;
+    line-height:18px;
+}
+.Note section[role=main]{
+    -ms-grid-column:2;
+    -ms-grid-row:1;
+    -ms-grid-row-span:2;
+    background:url(/images/one-line1.png) repeat-y #fefed8;
+}
+
+
+#NoteMainContent {
+    width:100%;height:100%;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 72px 56px 1fr;
+    font-size: 13pt;
+    box-shadow: 0px 2px 10px rgba(0,0,0,.3);
+    font-feature-settings: "dlig" 1, "ss02" 1, "case" 1;
+    overflow-y:scroll;
+    -ms-overflow-style:-ms-autohiding-scrollbar;
+    /*background:url(/images/two-line1.png) left top repeat-y #fefed8;*/
+    background:url(/images/36line.png) 129px 129px repeat;
+    background-attachment:local;
+}
+    #NoteMainContent .note_id {
+        display: none;
+    }
+    #NoteMainContent .notebodytop {
+        background:url(/images/one-line1.png) left top repeat-y #fefed8;
+        /*background:#fefed8;*/
+        /*background: url(/images/one-line1.png) no-repeat ,url(/images/one-line2.png) repeat-x;*/
+        -ms-grid-row: 1;
+        font-size: 22pt;
+        /*text-align: center;*/
+        line-height: 54px;
+        color: #000;
+        display:-ms-grid;
+        -ms-grid-columns:69px 1fr 30px;
+    }
+        #NoteMainContent .notebodytop .note_header {
+            -ms-grid-column:2;
+            height: 80px;
+            /*text-align: center;*/
+            overflow: hidden;
+            white-space:nowrap;
+            padding:25px 0;
+            font-weight:400;
+        }
+   
+          
+    #NoteMainContent .note_des {
+        -ms-grid-row: 2;
+        color: #9d4e4e;
+        background:url(/images/one-line1.png) left top repeat-y #fefed8;
+        /*background:url(/images/one-line1.png) left top repeat-y #fefed8,url(/images/line.png) repeat-x;*/
+        display:-ms-grid;
+        -ms-grid-columns:105px 1fr 275px;
+        -ms-grid-rows:1fr;
+        padding-top:26px;
+        height:30px;
+        line-height:30px;
+        }
+        #NoteMainContent .note_des .note_tags {
+            -ms-grid-column:1;
+            text-align:right;
+            padding-right:5px;
+           
+        }
+        #NoteMainContent .note_des .note_updated {
+            -ms-grid-column:3;
+            padding-right:30px;
+            text-align:right;
+        }
+        #NoteMainContent .note_des #Note_tags {
+            -ms-grid-column:2;
+            overflow: hidden;
+            white-space:nowrap;
+        }
+    #NoteMainContent .note_content {
+        /*background:#fff28f;*/
+        color: #000;
+        -ms-grid-row: 3;
+        word-wrap:break-word;
+        font-size:14pt;
+        line-height:36px;
+        padding:8px 30px 20px 69px;
+        /*overflow-y: scroll;*/ 
+        /*background:url(/images/two-line1.png) left top repeat-y;*/
+        background-attachment:local;
+        font-family:'Segoe UI','Microsoft YaHei UI';
+        
+    }
+#color_select_area{
+    width: 440px;
+    height:45px;
+    min-height:45px;
+    max-height:45px;
+    min-width:440px;
+    max-width:440px;
+    background:#352923;
+    padding-top:20px;
+    border:none;
+}
+    #color_select_area button{
+        width:45px;
+        height:45px;
+        min-width:40px;
+        min-height:40px;
+        border-radius:22.5px;
+        margin:0 7px;
+    }
+    #color_select_area button.select{
+        background-image:url(/images/choose.png);
+        background-position:center center;
+        background-repeat:no-repeat;
+    }
+#color1 {
+    background-color: rgb(255, 252, 196);
+}
+#color2 {
+    background-color:rgb(255, 220, 220);
+}
+#color3 {
+    background-color:rgb(255, 214, 184);
+}
+#color4 {
+    background-color:rgb(223, 247, 195);
+}
+#color5 {
+    background-color:rgb(195, 242, 243);
+}
+#color6{
+    background-color:rgb(175, 218, 255);
+}
+#color7{
+    background-color:rgb(210, 206, 245);
+}
+#cmdColor .win-commandimage{
+    /*color:red;*/
+    line-height:38px;
+}
+
+#NavBar header[role=banner] {
+        /* 定义包含后退按钮和页标题的列的网格。*/
+        -ms-grid-columns: 120px 1fr;
+        -ms-grid-rows: 1fr;
+        display: -ms-grid;
+    }
+
+        #NavBar header[role=banner] .win-backbutton {
+            margin-left: 39px;
+            margin-top: 35px;
+        }
+
+        #NavBar header[role=banner] .titlearea {
+            -ms-grid-column: 2;
+            margin-top: 13px;
+        }
+
+            #NavBar header[role=banner] .titlearea .pagetitle {
+                width: calc(100% - 20px);
+            }
+
+
+@media screen and (-ms-view-state: snapped) {
+    .Note{
+        -ms-grid-columns:0px 1fr;
+        -ms-grid-rows: 126px 1fr 0px;
+        display: -ms-grid;
+        height: 100%;
+        width: 100%;
+    
+    }
+    .Note section[role=main]{
+        background:url(/images/one-line1.png) -40px repeat-y #fefed8;
+    }
+    #NoteMainContent .notebodytop{
+        background:url(/images/one-line1.png) -40px repeat-y #fefed8;
+        -ms-grid-columns:29px 1fr 30px;
+    }
+    #NoteMainContent .note_des{
+        background:url(/images/one-line1.png) -40px repeat-y #fefed8;
+        -ms-grid-columns:65px 1fr 0px;
+    }
+    #NoteMainContent .note_content {
+        padding:8px 30px 20px 29px;
+    }
+    #NoteMainContent .note_des .note_updated {
+        display:none
+    }
+    #cmdColor,#cmdDelete{
+        display:none;
+    }
+    #NavBar header[role=banner] {
+        /* 定义包含后退按钮和页标题的列的网格。*/
+        -ms-grid-columns: 70px 1fr;
+    }
+    #NavBar header[role=banner] .win-backbutton {
+        margin-left: 19px;
+    }
+    #NavBar header[role=banner] .titlearea .pagetitle {
+        font-size:32pt;
+    }
+}
+
+@media screen and (-ms-high-contrast) {
+   #NoteMainContent {
+        border:1px solid #fff;
+    }
+    .notebodytop {
+        border-bottom:1px solid #fff;
+    }
+}
